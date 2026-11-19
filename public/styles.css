@@ -16,12 +16,12 @@ body {
 }
 
 .broadcast picture,
-.broadcast img {
-  display: block;
+.broadcast picture img {
   width: 100%;
 }
 
 .broadcast img {
+  display: block;
   height: auto;
   font: inherit;
   text-align: center;
@@ -34,12 +34,26 @@ body {
 
 .broadcast__title,
 .broadcast__schedule,
-.broadcast__invitation {
+.broadcast__invitation,
+.broadcast__radio,
+.broadcast__ornament {
   position: absolute;
   margin: 0;
 }
 
-/* Positions are proportional to the original 1920 × 1080 and 1080 × 1920 frames. */
+.broadcast__radio {
+  bottom: 3%;
+  left: 1.8%;
+  width: 25.5%;
+}
+
+.broadcast__ornament {
+  bottom: 3.6%;
+  left: 53%;
+  width: 11.6%;
+}
+
+/* Text positions follow the original 1920 × 1080 and 1080 × 1920 frames. */
 .broadcast__title {
   top: 22.593%;
   left: 23.958%;
@@ -63,6 +77,19 @@ body {
 @media (max-width: 640px), (orientation: portrait) {
   .broadcast {
     aspect-ratio: 9 / 16;
+  }
+
+  .broadcast__radio {
+    bottom: 2.7%;
+    left: 3.4%;
+    width: 50%;
+  }
+
+  .broadcast__ornament {
+    bottom: 18%;
+    right: 9%;
+    left: auto;
+    width: 26%;
   }
 
   .broadcast__title {
